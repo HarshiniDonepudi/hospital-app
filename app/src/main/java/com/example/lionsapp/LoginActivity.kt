@@ -12,10 +12,12 @@ import com.google.android.material.tabs.TabLayout.TabLayoutOnPageChangeListener
 
 class LoginActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstancesState: Bundle?) {
         super.onCreate(savedInstancesState)
         setContentView(R.layout.activity_login)
 
+        val v=0.0f
         val tabLayout: TabLayout = findViewById(R.id.tab)
         val viewPager: ViewPager = findViewById(R.id.viewpage)
         val fb: FloatingActionButton = findViewById(R.id.facebook)
@@ -39,6 +41,18 @@ class LoginActivity : AppCompatActivity() {
             override fun onTabUnselected(tab: TabLayout.Tab) {}
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
+
+        fb.setTranslationY(300F)
+        google.setTranslationY(300F)
+        tabLayout.setTranslationY(300F)
+        fb.setAlpha(v)
+        google.setAlpha(v)
+        tabLayout.setAlpha(v)
+
+        fb.animate().translationY(0F).alpha(1F).setDuration(1000).setStartDelay(400).start()
+        google.animate().translationY(0F).alpha(1F).setDuration(1000).setStartDelay(400).start()
+        tabLayout.animate().translationY(0F).alpha(1F).setDuration(1000).setStartDelay(400).start()
+
     }
 }
 

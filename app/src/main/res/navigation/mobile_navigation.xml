@@ -21,5 +21,20 @@
         android:id="@+id/nav_slideshow"
         android:name="com.example.lionsapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_facilities" />
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.example.lionsapp.ui.appointment.AppointmentFragment"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_appointment" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.lionsapp.ui.Contact.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/covidFragment"
+        android:name="com.example.lionsapp.ui.Covid.CovidFragment"
+        android:label="fragment_covid"
+        tools:layout="@layout/fragment_covid" />
 </navigation>
